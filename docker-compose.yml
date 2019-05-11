@@ -4,9 +4,9 @@ services:
 
   node:
     build: .
-    command: elm-live src/Main.elm -h 0.0.0.0 -p 8000 -s index.html
+    command: elm-live src/Main.elm  -h 0.0.0.0 -p 3000 -s index.html -- --output=app.js
     ports:
-      - 3000:8000
+      - 3000:3000
     volumes:
       - .:/mnt
       - /mnt/elm-stuff
